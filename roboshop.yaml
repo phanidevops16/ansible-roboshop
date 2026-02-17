@@ -16,10 +16,11 @@
       instance_type: "t3.micro"
       security_group: "{{ sg_id }}"
       image_id: "{{ ami_id }}"
-      name_instance: "{{ item }}-{{ env }}"
+      name: "{{ item }}-{{ env }}"
       tags: 
         Project: roboshop
         Component: "{{ item }}"
+        Environment: "{{ env }}"
         Name: "{{ item }}-{{ env }}"
     loop: "{{ instances }}"
     register: ec2_output
