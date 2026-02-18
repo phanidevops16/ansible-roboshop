@@ -6,7 +6,7 @@
   vars:
     sg_id:  sg-0d5b7c6068d2727ab
     ami_id: ami-0220d79f3f480ecf5
-    domain_name: phanidevops16.online
+    domain_name: 
     env: dev
     instances:
     - mongodb
