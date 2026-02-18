@@ -8,7 +8,6 @@
     ami_id: ami-0220d79f3f480ecf5
     domain_name: daws88s.online
     env: dev
-    action: create
     instances:
     - mongodb
     - catalogue
@@ -41,6 +40,5 @@
       value: "{{ item.instances[0].private_ip_address }}"
       wait: true
     loop: "{{ ec2_output.results }}" 
-    when: action == "create"
 
 
